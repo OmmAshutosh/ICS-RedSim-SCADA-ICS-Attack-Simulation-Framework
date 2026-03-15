@@ -1,0 +1,161 @@
+# Week 8 — Final Integration & System Demonstration
+
+## Overview
+
+Week 8 represents the **final phase of the ICS-RedSim project**, where all components of the virtual ICS security lab are integrated and validated.
+The objective of this phase is to demonstrate the complete workflow of the system, including **industrial process operation, security incident simulation, and detection using monitoring tools**.
+
+This stage verifies that the ICS environment can successfully simulate industrial security incidents while allowing monitoring tools to detect abnormal activity.
+
+---
+
+# Objectives
+
+The key objectives of Week 8 include:
+
+* Integrate all lab components
+* Perform end-to-end system validation
+* Demonstrate attack detection capability
+* Collect and organize project evidence
+* Prepare final project documentation and demo
+
+---
+
+# Integrated System Architecture
+
+The complete ICS-RedSim environment includes multiple layers that work together to simulate and monitor industrial operations.
+
+### System Components
+
+| Component  | Role                                    |
+| ---------- | --------------------------------------- |
+| OpenPLC    | Simulated programmable logic controller |
+| FUXA       | SCADA/HMI monitoring interface          |
+| Suricata   | Network intrusion detection system      |
+| Wazuh      | Security monitoring and log analysis    |
+| Wireshark  | Network traffic analysis                |
+| Kali Linux | Controlled attack simulation            |
+
+These components together form a **virtual ICS cybersecurity testbed**.
+
+---
+
+# End-to-End System Workflow
+
+The final system workflow demonstrates how industrial monitoring and security detection operate together.
+
+```
+Normal Process Operation
+        ↓
+SCADA Monitoring
+        ↓
+Security Incident Simulation
+        ↓
+Network Traffic Analysis
+        ↓
+IDS Alert Generation
+        ↓
+Security Monitoring Dashboard
+```
+
+This workflow illustrates how abnormal activity can be detected within industrial networks.
+
+---
+
+# System Demonstration
+
+The final demonstration includes the following steps:
+
+### Step 1 — Normal Operation
+
+* SCADA dashboard displays tank level
+* Pump control operates normally
+* PLC executes process logic
+* No IDS alerts generated
+
+### Step 2 — Incident Simulation
+
+Controlled security scenarios are executed from the testing machine.
+
+Examples include:
+
+* Network scanning
+* Abnormal Modbus traffic
+* Traffic bursts
+
+### Step 3 — Detection
+
+Monitoring tools detect abnormal behavior.
+
+* Suricata generates network alerts
+* Wazuh displays security events
+* Wireshark captures abnormal packets
+
+### Step 4 — Evidence Collection
+
+Evidence is collected to document the system response.
+
+---
+
+# Evidence Collected
+
+Multiple forms of evidence were gathered to validate the system.
+
+| Evidence Type       | Source          |
+| ------------------- | --------------- |
+| Network PCAP files  | Wireshark       |
+| IDS Alerts          | Suricata logs   |
+| Security Events     | Wazuh dashboard |
+| Process Screenshots | SCADA interface |
+
+These artifacts demonstrate the detection capability of the system.
+
+---
+
+# Final Deliverables
+
+At the conclusion of the project, the following outputs were produced:
+
+* Fully functional virtual ICS security lab
+* Documented attack simulation scenarios
+* Network traffic analysis results
+* IDS monitoring and alert logs
+* Project documentation and report
+* Demonstration video
+* Organized GitHub repository
+
+---
+
+# Project Outcome
+
+The ICS-RedSim lab successfully demonstrates how a **virtual industrial control system environment** can be used to simulate and detect cybersecurity incidents.
+
+The project highlights the importance of:
+
+* Network monitoring in industrial systems
+* Baseline traffic analysis
+* Intrusion detection mechanisms
+* Safe testing environments for ICS security research
+
+This lab environment can be used for **educational purposes, cybersecurity research, and security training**.
+
+---
+
+# Future Improvements
+
+Potential improvements for the project include:
+
+* Integration of additional ICS protocols
+* Implementation of machine learning-based anomaly detection
+* Integration with physical PLC hardware
+* Expansion of attack scenario library
+* Automated incident response workflows
+
+---
+
+# Conclusion
+
+The ICS-RedSim framework provides a **safe, cost-effective, and scalable platform** for studying industrial cybersecurity threats and detection mechanisms.
+By combining process simulation with security monitoring tools, the project demonstrates how industrial environments can be protected against cyber threats.
+
+---
