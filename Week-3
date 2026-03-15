@@ -1,0 +1,140 @@
+# Week 3 — Industrial Process Simulation
+
+## Overview
+
+Week 3 focuses on implementing a **simulated industrial process** controlled by the PLC.
+The goal of this phase is to create a realistic environment where the PLC interacts with process variables such as sensors and actuators.
+
+A **tank level control system** was implemented to represent a simplified industrial process commonly used in manufacturing and water treatment systems.
+
+The simulation allows the PLC to control the system behavior while generating data that will later be monitored by the SCADA system.
+
+---
+
+# Objectives
+
+The main objectives of this phase include:
+
+* Implement a simulated industrial process
+* Develop PLC logic to control the process
+* Simulate sensor values and actuator behavior
+* Establish process safety conditions
+* Validate system behavior during normal operation
+
+---
+
+# Industrial Process Model
+
+The simulated plant represents a **water tank control system**.
+
+This type of system is widely used in industrial environments such as:
+
+* Water treatment facilities
+* Chemical processing plants
+* Manufacturing systems
+* Storage tank monitoring
+
+The PLC continuously monitors the tank level and controls the pump to maintain safe operating conditions.
+
+---
+
+# Process Components
+
+| Component       | Description                           |
+| --------------- | ------------------------------------- |
+| Tank            | Simulated water storage container     |
+| Pump            | Controls water inflow                 |
+| Level Sensor    | Measures tank water level             |
+| Alarm Indicator | Triggers when tank reaches high level |
+
+These components interact with the PLC through process variables.
+
+---
+
+# Process Logic
+
+The PLC executes control logic that simulates how an industrial tank behaves.
+
+### Control Rules
+
+| Condition       | System Behavior          |
+| --------------- | ------------------------ |
+| Pump ON         | Tank level increases     |
+| Pump OFF        | Tank level decreases     |
+| Tank Full       | Pump automatically stops |
+| Tank Level High | Alarm is triggered       |
+
+This logic ensures the system operates within safe limits.
+
+---
+
+# PLC Process Variables
+
+The following variables were used in the PLC logic to represent the industrial process.
+
+| Variable      | Description                   |
+| ------------- | ----------------------------- |
+| Pump          | Controls water flow into tank |
+| Tank_Level    | Represents tank sensor value  |
+| High_Alarm    | Indicates high tank level     |
+| Start_Command | Operator start signal         |
+| Stop_Command  | Operator stop signal          |
+
+These variables simulate the interaction between industrial sensors and actuators.
+
+---
+
+# Simulation Behavior
+
+During normal operation:
+
+* The pump increases the tank level when activated.
+* When the pump is turned off, the tank level gradually decreases.
+* If the tank level reaches the upper limit, the PLC stops the pump automatically.
+* An alarm indicator activates when the tank reaches a critical level.
+
+This behavior closely resembles real industrial tank control systems.
+
+---
+
+# System Validation
+
+The simulation was tested to confirm correct system behavior.
+
+Validation steps included:
+
+* Verifying pump start and stop control
+* Observing tank level changes
+* Confirming alarm activation at high levels
+* Ensuring automatic safety logic operates correctly
+
+The system successfully demonstrated stable process control.
+
+---
+
+# Deliverables
+
+The following outputs were produced during Week 3:
+
+* Working industrial process simulation
+* PLC logic controlling tank behavior
+* Sensor value generation
+* Demonstration of normal process operation
+* Screenshots of PLC runtime and process behavior
+
+---
+
+# Next Phase
+
+Week 4 will focus on implementing the **SCADA monitoring layer**.
+
+The next stage includes:
+
+* Deploying the SCADA system
+* Connecting SCADA to the PLC
+* Designing the HMI dashboard
+* Visualizing process data in real time
+
+This will enable operators to monitor and control the industrial process through a graphical interface.
+
+---
