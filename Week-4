@@ -1,0 +1,139 @@
+# Week 4 — SCADA / HMI Implementation
+
+## Overview
+
+Week 4 focuses on building the **Supervisory Control and Data Acquisition (SCADA)** layer for the ICS-RedSim lab environment.
+This phase involves deploying a Human Machine Interface (HMI) that allows operators to **monitor and control the industrial process in real time**.
+
+The SCADA system was implemented using **FUXA**, an open-source web-based SCADA platform designed for industrial monitoring and visualization.
+
+By connecting the SCADA system to the PLC using **Modbus TCP**, the operator interface can display process data and send control commands to the PLC.
+
+---
+
+# Objectives
+
+The key objectives of Week 4 include:
+
+* Deploy the SCADA platform
+* Connect SCADA to the PLC using Modbus TCP
+* Design a graphical HMI dashboard
+* Enable operator control of the industrial process
+* Visualize process variables in real time
+
+---
+
+# SCADA System Architecture
+
+The SCADA system acts as a **supervisory layer** between operators and industrial controllers.
+
+### SCADA Communication Flow
+
+```
+Operator Interface (HMI)
+        |
+        | Modbus TCP
+        |
+SCADA Server (FUXA)
+        |
+        |
+PLC Controller (OpenPLC)
+        |
+        |
+Industrial Process Simulation
+```
+
+This architecture allows operators to monitor system behavior and issue commands through a graphical interface.
+
+---
+
+# SCADA Platform
+
+The SCADA platform used in this project is **FUXA**.
+
+Key features include:
+
+* Web-based HMI interface
+* Real-time data monitoring
+* Industrial protocol support
+* Dashboard visualization
+* Alarm management
+
+FUXA enables quick development of interactive dashboards that represent industrial processes.
+
+---
+
+# HMI Dashboard Design
+
+A graphical dashboard was created to represent the simulated tank control system.
+
+### Dashboard Components
+
+| Component            | Function                         |
+| -------------------- | -------------------------------- |
+| Tank Level Indicator | Displays water level in tank     |
+| Pump Control Buttons | Start and stop pump              |
+| Alarm Indicator      | Shows high-level alarm condition |
+| Numeric Display      | Displays sensor value            |
+
+These components provide a visual representation of the industrial process.
+
+---
+
+# PLC–SCADA Communication
+
+Communication between SCADA and the PLC occurs through **Modbus TCP**, allowing the SCADA system to read and write values from the PLC registers.
+
+### Modbus Tag Mapping
+
+| Tag Name     | Modbus Address     | Function                       |
+| ------------ | ------------------ | ------------------------------ |
+| Tank_Level   | Holding Register 0 | Displays tank level            |
+| Pump_Control | Coil 1             | Controls pump operation        |
+| High_Alarm   | Coil 3             | Indicates high-level condition |
+
+This mapping allows the SCADA dashboard to interact directly with the PLC.
+
+---
+
+# System Validation
+
+The SCADA interface was tested to ensure proper communication and control.
+
+Validation tests included:
+
+* Verifying connection between SCADA and PLC
+* Observing real-time tank level updates
+* Testing pump start/stop commands
+* Confirming alarm indicator behavior
+
+The system successfully demonstrated real-time control and monitoring.
+
+---
+
+# Deliverables
+
+The following outputs were produced during Week 4:
+
+* SCADA platform deployment
+* PLC–SCADA communication established
+* HMI dashboard created
+* Real-time monitoring of industrial process
+* Screenshots of SCADA dashboard
+
+---
+
+# Next Phase
+
+Week 5 focuses on **baseline network traffic analysis**.
+
+The upcoming phase will include:
+
+* Capturing normal industrial network traffic
+* Analyzing Modbus communication patterns
+* Documenting baseline system behavior
+* Preparing data for anomaly detection
+
+Baseline analysis is essential for identifying abnormal behavior during simulated security incidents.
+
+---
