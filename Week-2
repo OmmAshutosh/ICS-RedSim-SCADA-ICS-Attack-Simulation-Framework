@@ -1,0 +1,147 @@
+# Week 2 — OT Network Setup & PLC Deployment
+
+## Overview
+
+Week 2 focuses on building the **Operational Technology (OT) layer** of the ICS-RedSim lab.
+This phase involves deploying a virtual **Programmable Logic Controller (PLC)** and preparing the base industrial network used for communication between control systems.
+
+The PLC is implemented using **OpenPLC**, which simulates real industrial controllers used in manufacturing and critical infrastructure environments.
+
+The OT environment forms the core of the simulated industrial plant that will later be monitored by SCADA and security tools.
+
+---
+
+# Objectives
+
+The primary goals of Week 2 include:
+
+* Create the OT network environment
+* Deploy a virtual PLC system
+* Install and configure OpenPLC
+* Implement basic PLC control logic
+* Enable Modbus TCP communication
+* Verify PLC functionality
+
+---
+
+# OT Network Environment
+
+The Operational Technology zone contains the industrial devices responsible for controlling the simulated process.
+
+### OT Zone Components
+
+| Component     | Role                                  |
+| ------------- | ------------------------------------- |
+| PLC VM        | Industrial controller running OpenPLC |
+| Ubuntu Server | Operating system for PLC runtime      |
+| Modbus TCP    | Industrial communication protocol     |
+
+This setup allows the PLC to communicate with SCADA systems and monitoring tools in later phases.
+
+---
+
+# Virtual Machine Setup
+
+A dedicated virtual machine was created to host the PLC runtime.
+
+| Parameter        | Configuration                |
+| ---------------- | ---------------------------- |
+| VM Name          | PLC_VM                       |
+| Operating System | Ubuntu Server 22.04          |
+| CPU              | 2 Cores                      |
+| RAM              | 2 GB                         |
+| Disk             | 20 GB                        |
+| Network          | OT Network (192.168.1.0/24) |
+
+The PLC VM is placed inside the **OT network segment** to mimic industrial device isolation.
+
+---
+
+# PLC Deployment
+
+The PLC functionality is implemented using **OpenPLC**, which provides an open-source platform for simulating industrial control systems.
+
+Key capabilities of OpenPLC include:
+
+* Ladder Logic programming
+* Modbus TCP communication
+* Real-time process control
+* Integration with SCADA systems
+
+OpenPLC allows development of PLC logic similar to real industrial controllers.
+
+---
+
+# PLC Control Logic
+
+A basic control logic was implemented to simulate a simple industrial process.
+
+### Process Variables
+
+| Variable   | Function                         |
+| ---------- | -------------------------------- |
+| Pump       | Controls water pump operation    |
+| Tank Level | Represents simulated tank sensor |
+| Alarm      | Indicates high-level condition   |
+
+---
+
+# Modbus Communication
+
+Communication between the PLC and other industrial components uses **Modbus TCP**, one of the most common protocols in industrial automation.
+
+### Modbus Register Mapping
+
+| Register Type    | Address | Function         |
+| ---------------- | ------- | ---------------- |
+| Coil             | 1       | Pump control     |
+| Holding Register | 0       | Tank level value |
+| Coil             | 3       | Alarm indicator  |
+
+This register mapping allows SCADA systems to read and write control values.
+
+---
+
+# Validation
+
+The PLC runtime was verified to ensure proper operation.
+
+Validation steps included:
+
+* Confirming PLC runtime status
+* Verifying Modbus port availability
+* Testing register access
+* Confirming PLC program execution
+
+Successful validation confirms that the PLC is ready for integration with SCADA in the next phase.
+
+---
+
+# Deliverables
+
+The following outputs were produced during Week 2:
+
+* Virtual PLC machine deployed
+* OpenPLC runtime installed
+* PLC control logic implemented
+* Modbus communication enabled
+* PLC runtime verification completed
+
+These components establish the foundation for implementing the SCADA monitoring layer.
+
+---
+
+# Next Phase
+
+Week 3 focuses on implementing the **industrial process simulation**.
+
+The upcoming phase will include:
+
+* Tank level simulation
+* Pump control behavior
+* Sensor value generation
+* Automatic process safety logic
+
+This process simulation will allow realistic interaction between PLC and SCADA systems.
+
+---
