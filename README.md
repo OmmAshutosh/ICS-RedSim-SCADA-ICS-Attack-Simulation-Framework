@@ -58,10 +58,10 @@ Example IP plan used in the lab:
 
 | Device        | IP Address    | Role               |
 | ------------- | ------------- | ------------------ |
-| PLC VM        | 192.168.x.x | OpenPLC Controller |
-| SCADA VM      | 192.168.x.x | FUXA HMI           |
-| Monitoring VM | 192.168.x.x | Suricata + Wazuh   |
-| Attacker VM   | 192.168.x.x | Kali Linux         |
+| PLC VM        | 192.168.1.x | OpenPLC Controller |
+| SCADA VM      | 192.168.1.x | FUXA HMI           |
+| Monitoring VM | 192.168.1.x | Suricata + Wazuh   |
+| Attacker VM   | 192.168.1.x | Kali Linux         |
 
 ---
 
