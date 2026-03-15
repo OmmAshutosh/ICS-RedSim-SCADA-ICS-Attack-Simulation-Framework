@@ -1,1 +1,149 @@
+# Week 1 — Project Planning & Lab Design
 
+## Overview
+
+Week 1 focuses on the **planning and architectural design** of the ICS-RedSim SCADA/ICS security lab.
+The objective of this phase is to define the **scope, system architecture, network segmentation, and technology stack** required to build a virtual industrial control system environment.
+
+This step ensures that the lab is **safe, isolated, and capable of simulating industrial cyber incidents** without affecting real systems.
+
+---
+
+# Objectives
+
+The goals of Week 1 are:
+
+* Define the project scope and safety guidelines
+* Design the ICS lab architecture
+* Select appropriate tools and technologies
+* Create an IP addressing plan
+* Define network zones similar to real ICS environments
+
+---
+
+# Lab Design Principles
+
+Industrial networks typically follow a **segmented architecture** to separate operational technology (OT) from IT infrastructure.
+
+The lab environment was designed to mimic this concept by separating the system into multiple zones.
+
+### Key Design Principles
+
+* Isolation of OT systems
+* Segmentation between monitoring and control layers
+* Controlled testing environment
+* Safe simulation of industrial incidents
+
+---
+
+# ICS Network Architecture
+
+The lab follows a **zone-based architecture**, similar to industrial security models used in real-world SCADA systems.
+
+### Network Zones
+
+| Zone                  | Description                                             |
+| --------------------- | ------------------------------------------------------- |
+| IT Zone               | Analyst workstation for monitoring and analysis         |
+| DMZ / Monitoring Zone | Security monitoring tools (IDS and SIEM)                |
+| OT Zone               | Industrial devices including PLC and SCADA              |
+| Attacker/Test Zone    | Controlled environment for security scenario simulation |
+
+---
+
+# Architecture Diagram
+
+The architecture diagram illustrates the communication flow between the SCADA system, PLC, and monitoring tools.
+
+```
+IT Zone
+   |
+   | Monitoring
+   |
+DMZ Zone
+   |
+   | IDS / SIEM Monitoring
+   |
+OT Zone
+   |-------------------|
+   |                   |
+OpenPLC (PLC)     FUXA (SCADA/HMI)
+   |
+   |
+Industrial Process Simulation
+```
+
+This structure allows monitoring tools to observe industrial network traffic without directly interfering with the process control system.
+
+---
+
+# Virtualization Platform
+
+The project uses **VMware Workstation Player** to build the virtual lab environment.
+
+Virtualization allows multiple machines to run in a single host system while maintaining network isolation.
+
+Advantages include:
+
+* Cost-effective ICS lab simulation
+* Safe testing environment
+* Easy replication and scalability
+
+---
+
+# Technology Stack
+
+The following technologies were selected for the lab implementation.
+
+| Tool               | Purpose                                  |
+| ------------------ | ---------------------------------------- |
+| VMware Workstation | Virtual lab environment                  |
+| OpenPLC            | PLC logic simulation                     |
+| FUXA               | SCADA/HMI interface                      |
+| Suricata           | Network Intrusion Detection System       |
+| Wazuh              | Security monitoring and SIEM             |
+| Wireshark          | Network packet analysis                  |
+| Kali Linux         | Security testing and incident simulation |
+
+---
+
+# Network IP Addressing Plan
+
+The following IP scheme is used to organize the virtual ICS network.
+
+| Device        | IP Address    | Role                     |
+| ------------- | ------------- | ------------------------ |
+| PLC VM        | 192.168.x.x | OpenPLC Controller       |
+| SCADA VM      | 192.168.x.x | FUXA HMI                 |
+| Monitoring VM | 192.168.x.x | Suricata + Wazuh         |
+| Attacker VM   | 192.168.x.x | Security testing machine |
+
+Each zone is placed in a separate network segment to simulate realistic industrial network design.
+
+---
+
+# Expected Outcome of Week 1
+
+By the end of this phase, the following deliverables were prepared:
+
+* ICS architecture design
+* Virtual network segmentation plan
+* IP addressing scheme
+* Tool selection and system roles
+
+These deliverables provide the foundation for implementing the ICS lab in the following weeks.
+
+---
+
+# Next Phase
+
+The next stage of the project involves building the **Operational Technology (OT) environment**.
+
+Week 2 focuses on:
+
+* Creating virtual machines
+* Installing the OpenPLC runtime
+* Developing PLC ladder logic
+* Enabling Modbus communication between devices
+
+---
