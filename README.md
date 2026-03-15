@@ -167,29 +167,90 @@ The lab demonstrates how **industrial intrusion detection can identify abnormal 
 ```
 ICS-RedSim-SCADA-Attack-Simulation-Lab
 │
+├── README.md
+│
 ├── docs
-│   ├── architecture
-│   └── report
+│   ├── week1-project-planning
+│   │   └── README.md
+│   │
+│   ├── week2-ot-network-plc-setup
+│   │   └── README.md
+│   │
+│   ├── week3-process-simulation
+│   │   └── README.md
+│   │
+│   ├── week4-scada-hmi-implementation
+│   │   └── README.md
+│   │
+│   ├── week5-baseline-network-analysis
+│   │   └── README.md
+│   │
+│   ├── week6-ids-monitoring
+│   │   └── README.md
+│   │
+│   ├── week7-attack-scenarios
+│   │   └── README.md
+│   │
+│   └── week8-final-integration
+│       └── README.md
+│
+├── architecture
+│   ├── network-diagram.png
+│   ├── zone-architecture.png
+│   └── ip-address-plan.md
 │
 ├── plc
-│   └── ladder-logic
+│   ├── ladder-logic
+│   │   └── tank_control_program
+│   │
+│   └── modbus-register-map.md
 │
 ├── scada
-│   └── dashboard
+│   ├── dashboard
+│   │   └── fuxa-dashboard-config
+│   │
+│   └── screenshots
+│       └── scada-interface.png
 │
 ├── monitoring
 │   ├── suricata
+│   │   ├── suricata-config.md
+│   │   └── custom-rules.rules
+│   │
 │   ├── wazuh
+│   │   └── wazuh-integration.md
+│   │
 │   └── wireshark
+│       └── baseline-analysis.md
 │
 ├── scenarios
+│   ├── discovery
+│   │   ├── network-scan.md
+│   │   └── modbus-read-burst.md
+│   │
+│   ├── integrity
+│   │   ├── sensor-spoofing.md
+│   │   └── command-timing-anomaly.md
+│   │
+│   └── availability
+│       ├── traffic-flood.md
+│       └── scada-service-disruption.md
 │
 ├── evidence
 │   ├── pcaps
+│   │   └── baseline_capture.pcap
+│   │
 │   ├── logs
+│   │   └── suricata-alerts.log
+│   │
 │   └── screenshots
+│       ├── wireshark-capture.png
+│       ├── suricata-alert.png
+│       └── wazuh-dashboard.png
 │
 └── demo
+    ├── demo-video-link.md
+    └── presentation-slides.pdf
 ```
 
 ---
