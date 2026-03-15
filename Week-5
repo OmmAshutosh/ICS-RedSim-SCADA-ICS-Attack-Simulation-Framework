@@ -1,0 +1,153 @@
+# Week 5 — Baseline Network Traffic Analysis
+
+## Overview
+
+Week 5 focuses on analyzing **normal network behavior within the ICS environment**.
+Understanding baseline communication patterns is essential for detecting abnormal activities during simulated cyber incidents.
+
+During this phase, network traffic between the SCADA system and PLC was captured and analyzed to identify **standard communication patterns and protocol usage**.
+
+Packet analysis was performed using **Wireshark**, which allows detailed inspection of industrial network traffic.
+
+The collected baseline data will later be used to compare against abnormal traffic generated during attack simulations.
+
+---
+
+# Objectives
+
+The main objectives of this phase include:
+
+* Capture normal ICS network traffic
+* Analyze Modbus communication patterns
+* Identify typical network behavior
+* Document baseline traffic characteristics
+* Prepare reference data for anomaly detection
+
+---
+
+# Network Communication Overview
+
+In the ICS-RedSim environment, communication occurs between the SCADA system and the PLC using the **Modbus TCP protocol**.
+
+### Communication Flow
+
+```
+SCADA System (FUXA)
+        |
+        | Modbus TCP
+        |
+PLC Controller (OpenPLC)
+        |
+        |
+Industrial Process Simulation
+```
+
+This communication allows the SCADA system to read process variables and send control commands to the PLC.
+
+---
+
+# Network Monitoring Tool
+
+Network traffic analysis was performed using **Wireshark**.
+
+### Key Features Used
+
+* Packet capture
+* Protocol analysis
+* Traffic filtering
+* Network statistics
+
+Wireshark enables detailed analysis of industrial protocols such as Modbus.
+
+---
+
+# Baseline Traffic Capture
+
+During normal system operation, packet captures were recorded while the SCADA dashboard monitored and controlled the simulated tank process.
+
+The captured traffic primarily consisted of:
+
+* Periodic register reads
+* Coil write operations
+* Request-response communication between SCADA and PLC
+
+These packets represent the standard behavior of an industrial control system.
+
+---
+
+# Modbus Protocol Analysis
+
+The industrial communication protocol used in the lab is **Modbus TCP**, one of the most widely used protocols in industrial automation.
+
+### Common Modbus Functions Observed
+
+| Function Code | Operation              |
+| ------------- | ---------------------- |
+| 01            | Read Coils             |
+| 03            | Read Holding Registers |
+| 05            | Write Single Coil      |
+| 06            | Write Single Register  |
+
+These operations allow the SCADA system to monitor sensor data and control actuators.
+
+---
+
+# Normal Traffic Characteristics
+
+The baseline traffic exhibited the following characteristics:
+
+| Feature               | Observation      |
+| --------------------- | ---------------- |
+| Protocol              | Modbus TCP       |
+| Port                  | TCP 502          |
+| Communication Pattern | Request-response |
+| Traffic Volume        | Low              |
+| Polling Interval      | Periodic         |
+
+These patterns represent normal industrial communication behavior.
+
+---
+
+# Baseline Observations
+
+The captured baseline traffic showed predictable communication between the SCADA and PLC systems.
+
+Key observations include:
+
+* Regular polling intervals
+* Consistent packet sizes
+* Limited number of communicating devices
+* Stable network traffic flow
+
+These characteristics provide a reference for identifying anomalies during simulated attacks.
+
+---
+
+# Deliverables
+
+The following outputs were produced during Week 5:
+
+* Baseline packet capture file (PCAP)
+* Modbus protocol analysis
+* Network traffic documentation
+* Wireshark screenshots of captured traffic
+* Baseline behavior report
+
+These results establish the **normal operating conditions** of the ICS environment.
+
+---
+
+# Next Phase
+
+Week 6 focuses on deploying **security monitoring tools** to detect abnormal activity in the ICS network.
+
+The next stage includes:
+
+* Installing Suricata IDS
+* Integrating logs with Wazuh
+* Monitoring industrial network traffic
+* Generating and analyzing security alerts
+
+This phase will introduce intrusion detection capabilities to the ICS lab environment.
+
+---
