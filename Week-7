@@ -1,0 +1,169 @@
+# Week 7 — ICS Attack & Anomaly Simulation
+
+## Overview
+
+Week 7 focuses on simulating **industrial cybersecurity incidents** within the ICS-RedSim lab environment.
+The purpose of this phase is to generate abnormal network behavior and evaluate whether the deployed monitoring tools can detect suspicious activity.
+
+Controlled scenarios were executed from a testing machine to simulate different types of industrial threats such as reconnaissance activity, command misuse, process manipulation, and availability disruptions.
+
+These scenarios allow the system to demonstrate how **industrial monitoring tools detect abnormal ICS network behavior**.
+
+---
+
+# Objectives
+
+The primary objectives of Week 7 include:
+
+* Simulate controlled ICS security incidents
+* Generate abnormal industrial network traffic
+* Observe process behavior during incidents
+* Capture network evidence
+* Validate IDS detection capability
+
+---
+
+# Attack Simulation Environment
+
+Security testing was performed using a dedicated testing machine running **Kali Linux**.
+
+The testing machine was placed in a separate network segment to simulate an external device interacting with the ICS environment.
+
+### Simulation Workflow
+
+```
+Attacker Machine
+       |
+       |
+Network Interaction
+       |
+       v
+PLC / SCADA System
+       |
+       |
+Abnormal Network Traffic
+       |
+       v
+Suricata IDS
+       |
+       v
+Security Alerts (Wazuh Dashboard)
+```
+
+This setup allows testing of security detection mechanisms in a controlled environment.
+
+---
+
+# Scenario Categories
+
+Multiple incident scenarios were created to simulate different types of ICS threats.
+
+## Category A — Discovery & Misuse
+
+These scenarios simulate reconnaissance activity within the OT network.
+
+| Scenario | Description                       |
+| -------- | --------------------------------- |
+| A1       | OT Network Scan Attempt           |
+| A2       | Unauthorized Modbus Read Burst    |
+| A3       | Unauthorized Modbus Write Attempt |
+
+These scenarios represent early-stage attacker activity attempting to identify industrial devices.
+
+---
+
+## Category B — Process Integrity Attacks
+
+These scenarios simulate attempts to manipulate industrial process values.
+
+| Scenario | Description                  |
+| -------- | ---------------------------- |
+| B1       | Sensor Value Spoofing        |
+| B2       | Rapid Command Timing Anomaly |
+
+Such attacks can mislead operators or cause unexpected system behavior.
+
+---
+
+## Category C — Availability Disruptions
+
+These scenarios simulate conditions that disrupt industrial system availability.
+
+| Scenario | Description                           |
+| -------- | ------------------------------------- |
+| C1       | High Traffic Burst / Flood Simulation |
+| C2       | SCADA Service Disruption              |
+
+These events can degrade system performance or temporarily interrupt operations.
+
+---
+
+## Category D — Detection Validation
+
+These scenarios confirm that monitoring tools properly detect abnormal activity.
+
+| Scenario | Description                  |
+| -------- | ---------------------------- |
+| D1       | IDS Alert Verification       |
+| D2       | Incident Evidence Collection |
+
+This phase ensures that security monitoring tools generate alerts during abnormal events.
+
+---
+
+# Evidence Collection
+
+For each scenario, multiple types of evidence were collected.
+
+| Evidence Type   | Source            |
+| --------------- | ----------------- |
+| Network Packets | Wireshark capture |
+| IDS Alerts      | Suricata logs     |
+| Security Events | Wazuh dashboard   |
+| Process Impact  | SCADA screenshots |
+
+Collecting this evidence allows analysis of how attacks affect the ICS environment.
+
+---
+
+# Observations
+
+During scenario execution, the following observations were made:
+
+* Abnormal traffic patterns appeared in packet captures.
+* Suricata generated alerts for suspicious activity.
+* Security events were visible in the Wazuh dashboard.
+* Some scenarios impacted the simulated industrial process.
+
+These observations demonstrate the effectiveness of the monitoring layer implemented in earlier phases.
+
+---
+
+# Deliverables
+
+The following outputs were produced during Week 7:
+
+* ICS attack scenario documentation
+* Network packet captures (PCAP files)
+* IDS alert logs
+* SCADA system screenshots during incidents
+* Evidence files for each scenario
+
+These deliverables validate the detection capabilities of the ICS monitoring system.
+
+---
+
+# Next Phase
+
+Week 8 focuses on **final integration and system demonstration**.
+
+The next stage will include:
+
+* End-to-end system testing
+* Demonstration of incident detection
+* Final project documentation
+* Preparation of demonstration materials
+
+This phase will conclude the ICS-RedSim project by validating the entire lab environment.
+
+---
