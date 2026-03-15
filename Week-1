@@ -113,10 +113,10 @@ The following IP scheme is used to organize the virtual ICS network.
 
 | Device        | IP Address    | Role                     |
 | ------------- | ------------- | ------------------------ |
-| PLC VM        | 192.168.x.x | OpenPLC Controller       |
-| SCADA VM      | 192.168.x.x | FUXA HMI                 |
-| Monitoring VM | 192.168.x.x | Suricata + Wazuh         |
-| Attacker VM   | 192.168.x.x | Security testing machine |
+| PLC VM        | 192.168.1.x | OpenPLC Controller       |
+| SCADA VM      | 192.168.1.x | FUXA HMI                 |
+| Monitoring VM | 192.168.1.x | Suricata + Wazuh         |
+| Attacker VM   | 192.168.1.x | Security testing machine |
 
 Each zone is placed in a separate network segment to simulate realistic industrial network design.
 
