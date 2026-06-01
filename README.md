@@ -287,9 +287,25 @@ Possible extensions of this project include:
 
 ---
 
-# Author
+# Authors
 
 Om Asutosh Das
+B.Tech Student – Cybersecurity & Cyberdefense
+Sri Sri University
+
+Debasmita Dash
+B.Tech Student – Cybersecurity & Cyberdefense
+Sri Sri University
+
+Aayush Nanda
+B.Tech Student – Cybersecurity & Cyberdefense
+Sri Sri University
+
+Ratnadeep Das
+B.Tech Student – Cybersecurity & Cyberdefense
+Sri Sri University
+
+Amal Antony Alex
 B.Tech Student – Cybersecurity & Cyberdefense
 Sri Sri University
 
