@@ -293,11 +293,11 @@ Om Asutosh Das
 B.Tech Student – Cybersecurity & Cyberdefense
 Sri Sri University
 
-Debasmita Dash
+Aayush Nanda
 B.Tech Student – Cybersecurity & Cyberdefense
 Sri Sri University
 
-Aayush Nanda
+Debasmita Dash
 B.Tech Student – Cybersecurity & Cyberdefense
 Sri Sri University
 
